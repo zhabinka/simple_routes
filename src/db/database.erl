@@ -24,13 +24,11 @@ execute(SQL) ->
 execute(SQL, Params) ->
   {ok, Conn} = get_connection(),
   try
-    Result = epgsql:equery(Conn, SQL, Params),
-    epgsql:close(Conn),
-    Result
+    epgsql:equery(Conn, SQL, Params),
   catch
-    _:Error ->
-        epgsql:close(Conn),
-        {error, Error}
+    _:Error -> {error, Error}
+  after
+    epgsql:close(Conn),
   end.
 
 query(SQL) ->

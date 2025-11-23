@@ -1,0 +1,24 @@
+%% -*- mode: erlang;erlang-indent-level: 4;indent-tabs-mode: nil -*-
+{application, simple_routes,
+ [{description, "simple_routes managed by Nova"},
+  {vsn, git},
+  {registered, []},
+  {mod, { simple_routes_app, []}},
+  {included_applications, []},
+  {applications,
+   [
+    kernel,
+    stdlib,
+    nova,
+    epgsql
+    % crypto,
+    % cowlib,
+    % ranch,
+    % cowboy,
+   ]},
+  {env,[]},
+  {modules, []},
+  {maintainers, []},
+  {licenses, ["Apache 2.0"]},
+  {links, []}
+ ]}.

@@ -17,10 +17,6 @@
 start(_StartType, _StartArgs) ->
     simple_routes_sup:start_link().
 
-    % rebar3 nova serve, подключение к базе есть и без init
-    % Инициализация базы данных
-    % ok = database:init(),
-
     % Запуск Nova
     % nova:start().
 

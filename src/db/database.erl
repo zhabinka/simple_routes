@@ -36,8 +36,8 @@ query(SQL) ->
 
 query(SQL, Params) ->
   case execute(SQL, Params) of
-    {ok, _Columns, Rows} -> {ok, Rows};
-    {ok, _Count} -> {ok, []};
+    {ok, _Columns, Rows} -> Rows;
+    {ok, _Count} -> [];
     Error -> Error
   end.
 

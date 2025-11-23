@@ -1,5 +1,5 @@
 -module(database).
--export([init/0, execute/1, execute/2, query/1, query/2, get_connection/0]).
+-export([init/0, execute/1, execute/2, query/1, query/2]).
 
 init() ->
   {ok, _} = application:ensure_all_started(epgsql),

@@ -10,7 +10,8 @@
     kernel,
     stdlib,
     nova,
-    epgsql
+    epgsql,
+    epgsql_pool
     % crypto,
     % cowlib,
     % ranch,
